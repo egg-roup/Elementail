@@ -1867,7 +1867,6 @@ GameObject:
   - component: {fileID: 1948830398}
   - component: {fileID: 1948830397}
   - component: {fileID: 1948830403}
-  - component: {fileID: 1948830402}
   - component: {fileID: 1948830401}
   - component: {fileID: 1948830400}
   - component: {fileID: 1948830399}
@@ -2271,20 +2270,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &1948830402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948830395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 266620661537fff44afc04f30164b6b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropResetTime: 0.5
-  controllerDownThreshold: -0.5
 --- !u!114 &1948830403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2297,7 +2282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266620661537fff44afc04f30164b6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropResetTime: 0.5
+  dropResetTime: 0.25
   controllerDownThreshold: -0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
