@@ -2,12 +2,36 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+    public float damageCooldown = 1f; // seconds between damage
+    private float damageTimer = 0f;
+
+    private PlayerHealth playerHealth;
+
+    void Start()
+    {
+        playerHealth = GetComponent<PlayerHealth>();
+    }
+
+    void Update()
+    {
+        if (damageTimer > 0f)
+            damageTimer -= Time.deltaTime;
+    }
+
+    private void TryDamage(int amount)
+    {
+        if (damageTimer <= 0f)
+        {
+            playerHealth.TakeDamage(amount);
+            damageTimer = damageCooldown;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
-            // TODO: Handle HP loss
-            Debug.Log("Player touched damage tile (solid). Lose HP here.");
+            TryDamage(10); // spikes
         }
     }
 
@@ -15,8 +39,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
-            // Optional: continuous damage if standing on spikes
-            Debug.Log("Player standing on damage tile (solid). Lose HP over time here.");
+            TryDamage(10); // spikes
         }
     }
 
@@ -24,8 +47,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePass"))
         {
-            // Handle fire tile damage (pass-through)
-            Debug.Log("Player passing through damage pass tile. Lose HP here.");
+            TryDamage(5); // fire
         }
     }
 
@@ -33,8 +55,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePass"))
         {
-            // Continuous fire damage
-            Debug.Log("Player inside damage pass tile. Lose HP repeatedly.");
+            TryDamage(5); // fire
         }
     }
 }
