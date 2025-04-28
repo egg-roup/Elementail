@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51676d2f855ef61439c86d0c891fd52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
+  damageAmount: 1
   damageCooldown: 1
 --- !u!50 &230149368
 Rigidbody2D:
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51676d2f855ef61439c86d0c891fd52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
+  damageAmount: 1
   damageCooldown: 1
 --- !u!114 &305334872
 MonoBehaviour:
@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51676d2f855ef61439c86d0c891fd52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
+  damageAmount: 1
   damageCooldown: 1
 --- !u!50 &440217363
 Rigidbody2D:
@@ -1676,7 +1676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00081372, y: 0}
+  m_AnchoredPosition: {x: 18, y: -35}
   m_SizeDelta: {x: 251.04, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475371083
@@ -1696,7 +1696,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 3
   m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51676d2f855ef61439c86d0c891fd52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
+  damageAmount: 1
   damageCooldown: 1
 --- !u!114 &681350631
 MonoBehaviour:
@@ -3002,7 +3002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209.47992, y: 175.5}
+  m_AnchoredPosition: {x: -200, y: 198.2}
   m_SizeDelta: {x: 251.0402, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1302994865
@@ -3205,7 +3205,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
+  m_ChildAlignment: 3
   m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -3724,7 +3724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51676d2f855ef61439c86d0c891fd52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
+  damageAmount: 1
   damageCooldown: 1
 --- !u!114 &1973400710
 MonoBehaviour:
