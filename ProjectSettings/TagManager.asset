@@ -8,6 +8,8 @@ TagManager:
   - Platform
   - Damage
   - DamagePass
+  - Enemy
+  - StompZone
   layers:
   - Default
   - TransparentFX
