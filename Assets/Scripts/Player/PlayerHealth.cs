@@ -1,21 +1,33 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    int currentHealth;
+    public int maxHearts = 9; // nine lives
+    private int currentHearts;
+
+    private HealthBar healthBar;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHearts = maxHearts;
+        healthBar = FindObjectOfType<HealthBar>(); 
+        healthBar.UpdateHealth(currentHearts);
     }
 
     public void TakeDamage(int amount)
     {
-        currentHealth -= amount;
-        Debug.Log("Player HP: " + currentHealth);
+        currentHearts -= amount;
+        if (currentHearts < 0) currentHearts = 0;
+        
+        Debug.Log("Player Lives: " + currentHearts);
 
-        if (currentHealth <= 0)
+        if (healthBar != null)
+        {
+            healthBar.UpdateHealth(currentHearts); 
+        }
+
+        if (currentHearts <= 0)
         {
             Die();
         }
