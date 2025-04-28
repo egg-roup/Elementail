@@ -1,9 +1,14 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class ParryHitbox : MonoBehaviour
 {
     public GameObject successVFXPrefab;
+    public float knockbackDuration = 0.5f;
     private SwordAttack swordAttack;
+    
+    // Track which objects we've already parried
+    private HashSet<Collider2D> parriedObjects = new HashSet<Collider2D>();
 
     void Start()
     {
@@ -13,25 +18,50 @@ public class ParryHitbox : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Parry hitbox triggered with: " + other.name);
-        
+
+        // If we've already parried this object, ignore it
+        if (parriedObjects.Contains(other))
+            return;
+
         if (other.CompareTag("Enemy") || other.CompareTag("EnemyProjectile"))
         {
+            // Add to our already-parried set
+            parriedObjects.Add(other);
 
             // Handle projectile parry
             if (other.CompareTag("EnemyProjectile"))
             {
-                Destroy(other.gameObject); // Optional: add reflect logic
+                Destroy(other.gameObject);
             }
 
             // Apply knockback to enemies
             if (other.CompareTag("Enemy"))
             {
-                Rigidbody2D enemyRb = other.GetComponent<Rigidbody2D>();
-                if (enemyRb != null)
+                // Get enemy components
+                EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+                EnemyDamage enemyDamage = other.GetComponent<EnemyDamage>();
+                
+                // Get the knockback controller (or add one if missing)
+                KnockbackController knockback = other.GetComponent<KnockbackController>();
+                if (knockback == null)
                 {
+                    knockback = other.gameObject.AddComponent<KnockbackController>();
+                }
+
+                if (enemyHealth != null)
+                {
+                    // Use the enemy's own damage value if available
+                    int damage = enemyDamage != null ? enemyDamage.damageAmount : 10;
+                    int actualDamage = enemyHealth.TakeDamage(damage);
+                    
+                    // Calculate knockback - with no multiplier as requested
                     Vector2 knockbackDir = (other.transform.position - transform.position).normalized;
-                    float knockbackForce = 7f; // You can tweak this
-                    enemyRb.linearVelocity = new Vector2(knockbackDir.x * knockbackForce, enemyRb.linearVelocity.y);
+                    float knockbackForce = actualDamage; // No multiplier
+                    
+                    // Apply knockback using our interface
+                    knockback.ApplyKnockback(knockbackDir * knockbackForce, knockbackDuration);
+                    
+                    Debug.Log($"Applied knockback to {other.name}: Direction {knockbackDir}, Force {knockbackForce}");
                 }
             }
 
@@ -48,5 +78,4 @@ public class ParryHitbox : MonoBehaviour
             swordAttack?.OnSuccessfulParry();
         }
     }
-
 }

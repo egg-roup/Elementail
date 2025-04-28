@@ -10,12 +10,14 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int amount)
+    public int TakeDamage(int amount)
     {
         Debug.Log("Enemy HP: " + currentHealth);
         currentHealth -= amount;
         if (currentHealth <= 0)
             Die();
+
+        return amount;
     }
 
     void Die()
