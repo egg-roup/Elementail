@@ -10,6 +10,7 @@ TagManager:
   - DamagePass
   - Enemy
   - StompZone
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - 'PlayerAttack '
   - 
   - 
   - 

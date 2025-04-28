@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
+    public bool facingRight = true;
 
     void Start()
     {
@@ -25,6 +26,18 @@ public class PlayerController : MonoBehaviour
 
         // Check for ground
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        // Flip player sprite and update facing
+        if (moveInput > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            facingRight = true;
+        }
+        else if (moveInput < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+            facingRight = false;
+        }
 
         // Handle jump input
         if (Input.GetButtonDown("Jump") && isGrounded)

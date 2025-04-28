@@ -24,7 +24,8 @@ public class PlayerStomp : MonoBehaviour
             }
 
             // Bounce the player upward with full jump force
-            playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, jumpForce);
+            //playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, jumpForce);
+
         }
     }
 }
