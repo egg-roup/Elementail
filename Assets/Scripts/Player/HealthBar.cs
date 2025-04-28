@@ -16,7 +16,6 @@ public class HealthBar : MonoBehaviour
     private HorizontalLayoutGroup topRowLayout;    // Layout group for top row
     private HorizontalLayoutGroup bottomRowLayout; // Layout group for bottom row
 
-
     void Start()
     {
         topRowLayout = topRow.GetComponent<HorizontalLayoutGroup>();
@@ -38,11 +37,18 @@ public class HealthBar : MonoBehaviour
             icon.SetActive(true);
             icons.Add(icon);
         }
+        
+        // Update health display after icons are created
+        UpdateHealth(currentHealth);
     }
 
     public void UpdateHealth(int currentHealth) {
-
         this.currentHealth = currentHealth;
+        
+        // If icons aren't built yet, just save the health value and return
+        if (icons.Count == 0) {
+            return;
+        }
         
         topRowLayout.enabled = false;
         bottomRowLayout.enabled = false;

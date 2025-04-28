@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    public float damageCooldown = 1f; // seconds between damage
+    public float damageCooldown = 2f; // seconds between damage
     private float damageTimer = 0f;
 
     private PlayerHealth playerHealth;
@@ -31,7 +31,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
-            TryDamage(10); // spikes
+            TryDamage(1); // spikes
         }
     }
 
@@ -39,7 +39,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Damage"))
         {
-            TryDamage(10); // spikes
+            TryDamage(1); // spikes
         }
     }
 
@@ -47,7 +47,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePass"))
         {
-            TryDamage(5); // fire
+            TryDamage(1); // fire
         }
     }
 
@@ -55,7 +55,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DamagePass"))
         {
-            TryDamage(5); // fire
+            TryDamage(1); // fire
         }
     }
 }

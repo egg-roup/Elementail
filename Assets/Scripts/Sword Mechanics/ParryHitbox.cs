@@ -56,7 +56,7 @@ public class ParryHitbox : MonoBehaviour
                     
                     // Calculate knockback - with no multiplier as requested
                     Vector2 knockbackDir = (other.transform.position - transform.position).normalized;
-                    float knockbackForce = actualDamage; // No multiplier
+                    float knockbackForce = actualDamage * 5; 
                     
                     // Apply knockback using our interface
                     knockback.ApplyKnockback(knockbackDir * knockbackForce, knockbackDuration);

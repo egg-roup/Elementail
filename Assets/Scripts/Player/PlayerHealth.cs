@@ -5,14 +5,20 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHearts = 9; // nine lives
     private int currentHearts;
-
     private HealthBar healthBar;
 
     void Start()
     {
         currentHearts = maxHearts;
-        healthBar = FindObjectOfType<HealthBar>(); 
-        healthBar.UpdateHealth(currentHearts);
+        healthBar = FindFirstObjectByType<HealthBar>();
+        if (healthBar != null)
+        {
+            healthBar.UpdateHealth(currentHearts);
+        }
+        else
+        {
+            Debug.LogError("No HealthBar found in the scene!");
+        }
     }
 
     public void TakeDamage(int amount)
