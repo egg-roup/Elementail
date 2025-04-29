@@ -6,6 +6,7 @@ public class ParryHitbox : MonoBehaviour
     public GameObject successVFXPrefab;
     public float knockbackDuration = 0.5f;
     private SwordAttack swordAttack;
+    private Animator animator;
     
     // Track which objects we've already parried
     private HashSet<Collider2D> parriedObjects = new HashSet<Collider2D>();
@@ -13,6 +14,8 @@ public class ParryHitbox : MonoBehaviour
     void Start()
     {
         swordAttack = GetComponentInParent<SwordAttack>();
+        animator = transform.root.GetComponent<Animator>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -72,6 +75,11 @@ public class ParryHitbox : MonoBehaviour
             {
                 Instantiate(successVFXPrefab, transform.position, Quaternion.identity);
                 Debug.Log("Parry flash spawned!");
+            }
+
+            if (animator != null)
+            {
+                animator.SetTrigger("Parry"); 
             }
 
             // Notify parry success

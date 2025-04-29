@@ -108,7 +108,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1056
+        width: 384
         height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,11 +124,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sesame_Run8_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 161
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a69aba97e4ded0f70800000000000000
+      internalID: 9155234538818611562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bb19a6e7b1938c54ebef9fc0e1f08d3c
+    spriteID: 5a2e5a2516e9088498053b3cfb33d407
     internalID: 0
     vertices: []
     indices: 
@@ -139,6 +161,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sesame_Run8_0: 5294602630104273997
+      Sesame_Run8_1: 9155234538818611562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

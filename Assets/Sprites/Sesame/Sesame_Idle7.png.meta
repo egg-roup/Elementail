@@ -51,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -108,7 +108,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1056
+        width: 384
         height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,11 +124,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sesame_Idle7_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 167
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbee518471d8aa550800000000000000
+      internalID: 6172901370397847229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8266e58fe992ae64492d9d5d0e193475
+    spriteID: c739fb190c0827d4eb6da7f278ba47d1
     internalID: 0
     vertices: []
     indices: 

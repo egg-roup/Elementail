@@ -108,7 +108,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1056
+        width: 384
         height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,11 +124,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sesame_Hurt3_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 161
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d915fc1d1688a950800000000000000
+      internalID: 6460561125060975065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e1efada5107501f44b9e21750a9cc68d
+    spriteID: ddf22ec485f216f44baade433be77303
     internalID: 0
     vertices: []
     indices: 
@@ -139,6 +161,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sesame_Hurt3_0: -3299014273091105244
+      Sesame_Hurt3_1: 6460561125060975065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

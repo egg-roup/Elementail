@@ -114,7 +114,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1056
+        width: 384
         height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -130,11 +130,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sesame_Jump2_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 167
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8025110fa4a82a50800000000000000
+      internalID: 6496623534026334346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sesame_Jump2_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 101
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5463e344d2bbbcd90800000000000000
+      internalID: -7076356586389752251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sesame_Jump2_3
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 101
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a32198a3ae8f4d0800000000000000
+      internalID: -3100470806315910653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a9a830ba5bd83d04f8ee45d3dce0d0d7
+    spriteID: 0ba54b337ff67194db9e938960c6aec6
     internalID: 0
     vertices: []
     indices: 
@@ -145,6 +211,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sesame_Jump2_0: 7211444337537543859
+      Sesame_Jump2_1: 6496623534026334346
+      Sesame_Jump2_2: -7076356586389752251
+      Sesame_Jump2_3: -3100470806315910653
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

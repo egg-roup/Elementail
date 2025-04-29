@@ -13,17 +13,19 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     
     // Private variables
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private bool isGrounded;
     private float moveInput;
     private float coyoteTimeCounter;
     private bool wasGrounded;
     public bool facingRight = true;
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
+        anim = GetComponent<Animator>();
         
         // This helps prevent the player from getting stuck on edges
         if (GetComponent<CapsuleCollider2D>() != null)
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Get player horizontal input - use GetAxis for smoother movement
-        moveInput = Input.GetAxis("Horizontal");
+        moveInput = Input.GetAxisRaw("Horizontal");
 
         // Check for ground
         wasGrounded = isGrounded;
@@ -75,6 +77,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
+
+        // Update Animator Parameters
+        anim.SetFloat("Speed", Mathf.Abs(moveInput));
+        anim.SetBool("IsGrounded", isGrounded);
+
     }
 
     void FixedUpdate()

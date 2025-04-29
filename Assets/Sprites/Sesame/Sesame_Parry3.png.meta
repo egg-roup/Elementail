@@ -55,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,12 +112,12 @@ TextureImporter:
       name: Sesame_Parry3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1056
-        height: 384
+        x: 95
+        y: 71
+        width: 254
+        height: 218
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -130,11 +130,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sesame_Parry3_1
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 197
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4d46d22a29ec5e40800000000000000
+      internalID: 5646644399998127436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sesame_Parry3_2
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 185
+        width: 62
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78ea381b7775df20800000000000000
+      internalID: 3446792460393179262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sesame_Parry3_3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 167
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d308bd53e09a5ec10800000000000000
+      internalID: 2082256281226936381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d8461d9afd199a94c92b50a44f1dc1bd
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -145,6 +211,9 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sesame_Parry3_0: 1379913345725243888
+      Sesame_Parry3_1: 5646644399998127436
+      Sesame_Parry3_2: 3446792460393179262
+      Sesame_Parry3_3: 2082256281226936381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

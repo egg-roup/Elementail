@@ -108,7 +108,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1056
+        width: 384
         height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -124,11 +124,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sesame_Die5_1
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 95
+        width: 50
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8493020239b96b40800000000000000
+      internalID: 5434078049832506507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 39969ea66da5e6c47b693ac8e0c2d4f5
+    spriteID: 22dda9dfa2a79574ba3ca884cb59bd6e
     internalID: 0
     vertices: []
     indices: 
@@ -139,6 +161,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Sesame_Die5_0: -7362390955680887782
+      Sesame_Die5_1: 5434078049832506507
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

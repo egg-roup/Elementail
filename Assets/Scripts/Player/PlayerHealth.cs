@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class PlayerHealth : MonoBehaviour
     private int currentHearts;
     private HealthBar healthBar;
     private UIManager uiManager;
+    private Animator animator; 
+    public bool canControl = true;
+
 
     void Start()
     {
@@ -14,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
         healthBar = FindFirstObjectByType<HealthBar>();
         uiManager = FindFirstObjectByType<UIManager>();
+        animator = GetComponent<Animator>();
 
         if (healthBar != null)
         {
@@ -36,6 +41,12 @@ public class PlayerHealth : MonoBehaviour
         {
             healthBar.UpdateHealth(currentHearts); 
         }
+        
+        if (animator != null)
+        {
+            Debug.Log("Trigger Hurt");
+            animator.SetTrigger("Hurt"); 
+        }
 
         if (currentHearts <= 0)
         {
@@ -46,10 +57,26 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
-        gameObject.SetActive(false);
-        
-        if (uiManager != null) {
+
+        GetComponent<PlayerController>().enabled = false;
+
+        if (animator != null)
+        {
+            animator.SetBool("isDead", true);
+            animator.SetTrigger("Die");
+        }
+
+        StartCoroutine(WaitForDeathAnimation());
+    }
+
+    IEnumerator WaitForDeathAnimation()
+    {
+        yield return new WaitForSeconds(1.5f); // Adjust to match your death animation length
+
+        if (uiManager != null)
+        {
             uiManager.ShowGameOver();
         }
     }
+
 }
