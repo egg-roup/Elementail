@@ -1,10 +1,61 @@
 fileFormatVersion: 2
-guid: 58b6e2000a5f4da4b8c0a55f9c09c4c5
+guid: 8bed99beadd8373478a08c6b54e6d297
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2882672684162946180
-    second: pauseIcon_0
+      213: -7637234091288671806
+    second: Sesame_Parry4_0
+  - first:
+      213: 3919152743872869576
+    second: Sesame_Parry4_1
+  - first:
+      213: 8572213355457834027
+    second: Sesame_Parry4_2
+  - first:
+      213: -8445607564090448619
+    second: Sesame_Parry4_3
+  - first:
+      213: -6794299565112569691
+    second: Sesame_Parry4_4
+  - first:
+      213: -3754797683921799644
+    second: Sesame_Parry4_5
+  - first:
+      213: 4035425788700737373
+    second: Sesame_Parry4_6
+  - first:
+      213: 253220761485938302
+    second: Sesame_Parry4_7
+  - first:
+      213: 2241827321221352164
+    second: Sesame_Parry4_8
+  - first:
+      213: 3443755243533243972
+    second: Sesame_Parry4_9
+  - first:
+      213: -6556771063030756269
+    second: Sesame_Parry4_10
+  - first:
+      213: 5967957492152080904
+    second: Sesame_Parry4_11
+  - first:
+      213: -6275323893382967998
+    second: Sesame_Parry4_12
+  - first:
+      213: 7586901423312525598
+    second: Sesame_Parry4_13
+  - first:
+      213: -4497560221164246659
+    second: Sesame_Parry4_14
+  - first:
+      213: 3796107103507104854
+    second: Sesame_Parry4_15
+  - first:
+      213: 1751228554194831952
+    second: Sesame_Parry4_16
+  - first:
+      213: -5468743996230260051
+    second: Sesame_Parry4_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +88,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +126,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +151,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pauseIcon_0
+      name: Sesame_Parry4_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 320
+        width: 1056
+        height: 384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7beeb08770bef7d0800000000000000
-      internalID: -2882672684162946180
+      spriteID: 5a0dfd31b8cc5b1a0800000000000000
+      internalID: -6794299565112569691
       vertices: []
       indices: 
       edges: []
@@ -125,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: debbc7136d4c72d469604ea418c79fab
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +186,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pauseIcon_0: -2882672684162946180
+      Sesame_Parry4_4: -6794299565112569691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
