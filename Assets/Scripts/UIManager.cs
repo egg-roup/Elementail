@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject optionsMenu;
     public GameObject gameOverScreen;
+    public GameObject confirmQuitPanel; 
     public GameObject pauseButton;
 
     private bool isPaused = false;
@@ -33,6 +34,7 @@ public class UIManager : MonoBehaviour
         pauseMenu.SetActive(false);
         optionsMenu.SetActive(false);
         gameOverScreen.SetActive(false);
+        confirmQuitPanel.SetActive(false);
         pauseButton.SetActive(true);
     }
 
@@ -45,6 +47,9 @@ public class UIManager : MonoBehaviour
         if (optionsMenu.activeSelf)
         {
             CloseOptionsMenu();
+        }
+        else if (confirmQuitPanel.activeSelf) {
+            CloseConfirmQuitPanel();
         }
         else if (isPaused)
         {
@@ -87,6 +92,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         gameOverScreen.SetActive(true);
         pauseButton.SetActive(false);
+        confirmQuitPanel.SetActive(false);
         pauseMenu.SetActive(false);
         optionsMenu.SetActive(false);
         isPaused = true;
@@ -96,6 +102,29 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1; 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+    }
+
+    public void QuitToMainMenu() {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OpenConfirmQuitPanel()
+    {
+        confirmQuitPanel.SetActive(true);
+        pauseMenu.SetActive(false);
+        gameOverScreen.SetActive(false);
+        Time.timeScale = 0f; 
+    }
+
+    public void CloseConfirmQuitPanel()
+    {
+        confirmQuitPanel.SetActive(false);
+        pauseMenu.SetActive(true);
+        if (!isPaused && !gameOverScreen.activeSelf)
+        {
+            Time.timeScale = 1f; 
+        }
     }
 
     public void QuitGame() {
