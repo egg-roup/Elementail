@@ -34,6 +34,16 @@ public class InputManager : MonoBehaviour
         }
 
         UIManager.Instance.OnEscapePressed();
+
+        var menuController = FindObjectOfType<MainMenuController>();
+        if (menuController != null)
+        {
+            if (menuController.optionsPanel.activeSelf)
+                menuController.CloseOptions();
+            else if (menuController.aboutPanel.activeSelf)
+                menuController.CloseAbout();
+        }
     }
+
 }
 
