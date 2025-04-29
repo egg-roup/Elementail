@@ -73,13 +73,14 @@ public class SwordAttack : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
     }
-
     private System.Collections.IEnumerator PerformParry()
     {
         isParrying = true;
         parrySuccess = false;
 
-        GameObject parry = Instantiate(parryHitboxPrefab, transform.position, Quaternion.identity, transform);
+        Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
+
+        GameObject parry = Instantiate(parryHitboxPrefab, hitboxSpawnPoint.position, rotation, transform);
 
         yield return new WaitForSeconds(0.2f); // Active window
 
@@ -93,8 +94,13 @@ public class SwordAttack : MonoBehaviour
         isParrying = false;
     }
 
+
     public void OnSuccessfulParry()
     {
         parrySuccess = true;
+    }
+    public bool IsParrying()
+    {
+        return isParrying;
     }
 }
