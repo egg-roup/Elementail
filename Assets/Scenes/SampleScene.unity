@@ -1804,7 +1804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b8a8b9f553f5419d6331aeb76dd3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stompDamage: 1
+  stompDamage: 10
   jumpForce: 15
 --- !u!114 &353473503
 MonoBehaviour:
@@ -9073,7 +9073,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7030696141983286840, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: damageAmount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 751132640257006551, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: m_Name
@@ -9084,12 +9084,20 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5818455674136423178, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818455674136423178, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818455674136423178, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.79
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 5818455674136423178, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.14
+      value: -2.986
       objectReference: {fileID: 0}
     - target: {fileID: 5818455674136423178, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: m_LocalPosition.z
