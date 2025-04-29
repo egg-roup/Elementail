@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class UIManager : MonoBehaviour
     [Header("UI References")]
     public GameObject pauseMenu;
     public GameObject optionsMenu;
+    public GameObject gameOverScreen;
     public GameObject pauseButton;
 
     private bool isPaused = false;
@@ -30,11 +32,16 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         optionsMenu.SetActive(false);
+        gameOverScreen.SetActive(false);
         pauseButton.SetActive(true);
     }
 
     public void OnEscapePressed()
     {
+        if (gameOverScreen.activeSelf)
+        {
+            return; 
+        }
         if (optionsMenu.activeSelf)
         {
             CloseOptionsMenu();
@@ -74,6 +81,21 @@ public class UIManager : MonoBehaviour
     public void CloseOptionsMenu() {
         optionsMenu.SetActive(false);
         pauseMenu.SetActive(true);
+    }
+
+    public void ShowGameOver(){
+        Time.timeScale = 0f;
+        gameOverScreen.SetActive(true);
+        pauseButton.SetActive(false);
+        pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+        isPaused = true;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
     }
 
     public void QuitGame() {

@@ -6,11 +6,15 @@ public class PlayerHealth : MonoBehaviour
     public int maxHearts = 9; // nine lives
     private int currentHearts;
     private HealthBar healthBar;
+    private UIManager uiManager;
 
     void Start()
     {
         currentHearts = maxHearts;
+
         healthBar = FindFirstObjectByType<HealthBar>();
+        uiManager = FindFirstObjectByType<UIManager>();
+
         if (healthBar != null)
         {
             healthBar.UpdateHealth(currentHearts);
@@ -43,6 +47,9 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player died!");
         gameObject.SetActive(false);
-        // Do more game over stuff here
+        
+        if (uiManager != null) {
+            uiManager.ShowGameOver();
+        }
     }
 }
