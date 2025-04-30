@@ -2,10 +2,17 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
+
+    public AudioMixer audioMixer;
+
+    public Slider musicSlider;
+    public Slider sfxSlider;
 
     [Header("UI References")]
     public GameObject pauseMenu;
@@ -136,5 +143,30 @@ public class UIManager : MonoBehaviour
 
     public bool IsPauseMenuOpen() => pauseMenu.activeSelf;
     public bool IsOptionsMenuOpen() => optionsMenu.activeSelf;
+
+    public void UpdateMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("MusicVolume", volume);
+    }
+
+    public void UpdateSoundVolume(float volume)
+    {
+        audioMixer.SetFloat("SFXVolume", volume);
+    }
+
+    public void SaveVolume() 
+    {
+        audioMixer.GetFloat("MusicVolume", out float musicVolume);
+        PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+
+        audioMixer.GetFloat("SFXVolume", out float sfxVolume);
+        PlayerPrefs.SetFloat("SFXVolume", sfxVolume);
+    }
+
+    public void LoadVolume()
+    {
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+    }
 
 }
