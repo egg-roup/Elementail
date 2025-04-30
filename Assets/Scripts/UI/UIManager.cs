@@ -37,6 +37,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        LoadVolume();
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         optionsMenu.SetActive(false);
@@ -53,7 +54,7 @@ public class UIManager : MonoBehaviour
         }
         if (optionsMenu.activeSelf)
         {
-            CloseOptionsMenu();
+            return;
         }
         else if (confirmQuitPanel.activeSelf) {
             CloseConfirmQuitPanel();

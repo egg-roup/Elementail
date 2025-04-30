@@ -1,20 +1,34 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance;
+
+    private MainMenuController mainMenu;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Keep InputManager across scenes
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        mainMenu = FindObjectOfType<MainMenuController>();
     }
 
     private void Update()
@@ -27,21 +41,15 @@ public class InputManager : MonoBehaviour
 
     private void HandleEscapePress()
     {
-        if (UIManager.Instance == null)
+        if (UIManager.Instance != null)
         {
-            Debug.LogWarning("UIManager not found!");
-            return;
+            UIManager.Instance.OnEscapePressed();
         }
 
-        UIManager.Instance.OnEscapePressed();
-
-        var menuController = FindObjectOfType<MainMenuController>();
-        if (menuController != null)
+        if (mainMenu != null)
         {
-            if (menuController.optionsPanel.activeSelf)
-                menuController.CloseOptions();
-            else if (menuController.aboutPanel.activeSelf)
-                menuController.CloseAbout();
+            if (mainMenu.aboutPanel.activeSelf)
+                mainMenu.CloseAbout();
         }
     }
 
