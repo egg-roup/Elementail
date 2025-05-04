@@ -6,6 +6,7 @@ public class ElementCooldown : MonoBehaviour
     public Image palmFill;
     public float cooldownDuration = 60f;
     public ElementRandomizer elementRandomizer;
+    public ElementDisplayController elementDisplayController;
 
     private float cooldownTimer = 0f;
     private bool isCoolingDown = false;
@@ -28,7 +29,10 @@ public class ElementCooldown : MonoBehaviour
                 Debug.Log("Cooldown done!");
 
                 palmFill.fillAmount = 0f;
-                // TODO: trigger paw blink or reroll available state
+                if (elementDisplayController != null)
+                {
+                    elementDisplayController.displayImage.gameObject.SetActive(false);  
+                }
             }
         }
     }
@@ -49,5 +53,10 @@ public class ElementCooldown : MonoBehaviour
         cooldownTimer = cooldownDuration;
         isCoolingDown = true;
         palmFill.fillAmount = 1f;
+
+        if (elementDisplayController != null)
+        {
+            elementDisplayController.displayImage.gameObject.SetActive(true);  
+        }
     }
 }

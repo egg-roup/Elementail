@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class ParryHitbox : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class ParryHitbox : MonoBehaviour
     public float knockbackDuration = 0.5f;
     private SwordAttack swordAttack;
     private Animator animator;
+
+    public ParryUIBar parryUIBar;
     
     // Track which objects we've already parried
     private HashSet<Collider2D> parriedObjects = new HashSet<Collider2D>();
@@ -85,5 +88,18 @@ public class ParryHitbox : MonoBehaviour
             // Notify parry success
             swordAttack?.OnSuccessfulParry();
         }
+
+        if (parryUIBar != null)
+        {
+            Debug.Log("Parry bar triggered!");
+            parryUIBar.OnParry();
+            StartCoroutine(RefillParryBar(1f));
+        }
+    }
+
+    private IEnumerator RefillParryBar(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        parryUIBar?.ResetBar();
     }
 }
