@@ -56,12 +56,12 @@ public class PlayerController : MonoBehaviour
         // Flip player sprite and update facing
         if (moveInput > 0.1f)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.5f, 0.5f, 1f);
             facingRight = true;
         }
         else if (moveInput < -0.1f)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 1f);
             facingRight = false;
         }
 

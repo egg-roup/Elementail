@@ -1150,7 +1150,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7207131602807823160, guid: afbbde368f35e4144bb34e2a02c46dd8, type: 3}
+  m_Sprite: {fileID: 3788814664937914723, guid: 5cb4dbec24b38a94785eeb109839151c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1171,7 +1171,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1733532675}
@@ -1213,17 +1213,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.08899218, y: -0.030789107}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.96875, y: 0.90625}
+    oldSize: {x: 3.84, y: 3.84}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.95, y: 0.95}
+  m_Size: {x: 1.2703718, y: 1.5099344}
   m_EdgeRadius: 0
 --- !u!50 &353473498
 Rigidbody2D:
@@ -2998,7 +2998,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3173,7 +3173,7 @@ Transform:
   m_GameObject: {fileID: 593368375}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.68, y: 0.01, z: 0}
+  m_LocalPosition: {x: 1.67, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7539,7 +7539,7 @@ Transform:
   m_GameObject: {fileID: 1733532674}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.83, z: 0}
+  m_LocalPosition: {x: 0, y: -0.968, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9494,7 +9494,7 @@ Transform:
   m_GameObject: {fileID: 2033357609}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.974, z: 0}
   m_LocalScale: {x: 0.9, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9728,6 +9728,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2139571401040991606, guid: a8b6323d83419584bbfc2e9635209bed, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 357cb3268e5d4a848888df0443756443, type: 2}
     - target: {fileID: 5005338371000092373, guid: a8b6323d83419584bbfc2e9635209bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.26
@@ -9849,6 +9853,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 869933693321346487, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 357cb3268e5d4a848888df0443756443, type: 2}
     - target: {fileID: 5818455674136423178, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.75
@@ -10083,6 +10091,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7361954189126123166, guid: 3839677096b3a8f49bad93a0aaf1b825, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 357cb3268e5d4a848888df0443756443, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10471,6 +10483,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3791765765504295237, guid: 49591621bdc4d454aa6853a6633b896b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 357cb3268e5d4a848888df0443756443, type: 2}
     - target: {fileID: 3797483791996379295, guid: 49591621bdc4d454aa6853a6633b896b, type: 3}
       propertyPath: damageAmount
       value: 1
