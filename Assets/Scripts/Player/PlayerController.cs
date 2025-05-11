@@ -86,7 +86,6 @@ public class PlayerController : MonoBehaviour
                 // Double jump
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 hasDoubleJumped = true;
-                anim.SetTrigger("DoubleJump"); // Optional animation
             }
         }
 

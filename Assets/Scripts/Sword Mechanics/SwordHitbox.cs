@@ -4,7 +4,8 @@ public class SwordHitbox : MonoBehaviour
 {
     public int baseDamage = 1;
     public float duration = 0.2f;
-    [HideInInspector] public float damageMultiplier = 1f;
+    public float damageMultiplier = 1f;
+    public float knockbackForce = 0f;
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class SwordHitbox : MonoBehaviour
                 int totalDamage = Mathf.RoundToInt(baseDamage * damageMultiplier);
                 health.TakeDamage(totalDamage);
             }
+            KnockbackController knockback = other.GetComponent<KnockbackController>() ?? other.gameObject.AddComponent<KnockbackController>();
+            Vector2 direction = (other.transform.position - transform.position).normalized;
+            knockback.ApplyKnockback(direction * knockbackForce, 0.3f);
         }
     }
 }

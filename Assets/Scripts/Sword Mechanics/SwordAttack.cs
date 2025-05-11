@@ -13,6 +13,8 @@ public class SwordAttack : MonoBehaviour
 
     private float baseBasicHitDamage;
     private float baseHeavyHitDamage;
+    public float swordKnockbackForce;
+
 
     [Header("Parry Prefab")]
     public GameObject parryHitboxPrefab;
@@ -36,6 +38,18 @@ public class SwordAttack : MonoBehaviour
     {
         baseBasicHitDamage = basicHitDamage;
         baseHeavyHitDamage = heavyHitDamage;
+        if (parryHitboxPrefab != null)
+        {
+            ParryHitbox parryScript = parryHitboxPrefab.GetComponent<ParryHitbox>();
+            if (parryScript != null)
+            {
+                swordKnockbackForce = parryScript.parryKnockbackForce * 0.25f;
+            }
+            else
+            {
+                Debug.LogWarning("ParryHitbox component not found on parryHitboxPrefab.");
+            }
+        }
     }
 
     void Update()
@@ -84,6 +98,7 @@ public class SwordAttack : MonoBehaviour
         SwordHitbox hitboxScript = hitbox.GetComponent<SwordHitbox>();
         if (hitboxScript != null)
             hitboxScript.damageMultiplier = damageMultiplier;
+            hitboxScript.knockbackForce = swordKnockbackForce;
 
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
