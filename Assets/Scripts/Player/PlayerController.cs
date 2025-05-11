@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.3f;
     public LayerMask groundLayer;
+    private bool hasDoubleJumped = false;
     
     // Private variables
     public Rigidbody2D rb;
@@ -71,11 +72,24 @@ public class PlayerController : MonoBehaviour
         }
 
         // Handle jump input with coyote time
-        if (Input.GetButtonDown("Jump") && coyoteTimeCounter > 0)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            coyoteTimeCounter = 0; // Reset coyote time when jumping
+            if (coyoteTimeCounter > 0)
+            {
+                // Regular jump
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                coyoteTimeCounter = 0;
+                hasDoubleJumped = false;
+            }
+            else if (!isGrounded && !hasDoubleJumped)
+            {
+                // Double jump
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                hasDoubleJumped = true;
+                anim.SetTrigger("DoubleJump"); // Optional animation
+            }
         }
+
         
         // Variable jump height - if player releases jump button, reduce upward velocity
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0)
