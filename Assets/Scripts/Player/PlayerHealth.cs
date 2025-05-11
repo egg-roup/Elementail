@@ -11,8 +11,7 @@ public class PlayerHealth : MonoBehaviour
     private Animator animator; 
     public bool canControl = true;
     private bool hasShield = false;
-
-
+    private PlayerController playerController;
 
     void Start()
     {
@@ -21,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar = FindFirstObjectByType<HealthBar>();
         uiManager = FindFirstObjectByType<UIManager>();
         animator = GetComponent<Animator>();
+        playerController = GetComponent<PlayerController>();
 
         if (healthBar != null)
         {
@@ -34,6 +34,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if (playerController != null && playerController.IsInvincible())
+        {
+            Debug.Log("Damage ignored during dash!");
+            return;
+        }
+        
         if (hasShield)
         {
             Debug.Log("Shield absorbed the damage!");

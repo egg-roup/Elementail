@@ -55,7 +55,7 @@ public class SwordAttack : MonoBehaviour
     void Update()
     {
         // Left click = sword attack
-        if (Input.GetMouseButtonDown(0) && !isAttacking && !isParrying)
+        if (Input.GetMouseButtonDown(0) && !isAttacking && !isParrying && !playerController.IsDashing())
         {
             float timeSinceLastClick = Time.time - lastClickTime;
 

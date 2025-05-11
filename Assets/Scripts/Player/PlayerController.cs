@@ -15,6 +15,19 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.3f;
     public LayerMask groundLayer;
     private bool hasDoubleJumped = false;
+
+    [Header("Dash Settings")]
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 0.2f;
+
+    private enum DashState { Ready, Dashing, Cooldown }
+    private DashState dashState = DashState.Ready;
+    private float dashTimer = 0f;
+    private bool isDashing = false;
+    private bool isInvincible = false;
+    private float originalGravity;
+
     
     // Private variables
     public Rigidbody2D rb;
@@ -32,6 +45,8 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         baseMoveSpeed = moveSpeed;
         baseJumpForce = jumpForce;
+        originalGravity = rb.gravityScale;
+
 
         // This helps prevent the player from getting stuck on edges
         if (GetComponent<CapsuleCollider2D>() != null)
@@ -100,6 +115,15 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(moveInput));
         anim.SetBool("IsGrounded", isGrounded);
 
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashState == DashState.Ready)
+        {
+            dashState = DashState.Dashing;
+            dashTimer = dashDuration;
+            rb.gravityScale = 0;
+            isDashing = true;
+            isInvincible = false;
+        }
+
     }
 
     void FixedUpdate()
@@ -119,6 +143,34 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogWarning("Player might be stuck! Input: " + moveInput + ", Velocity: " + rb.linearVelocity);
         }
+
+        if (dashState == DashState.Dashing)
+        {
+            // Lock movement and apply dash force
+            float dashDir = facingRight ? 1f : -1f;
+            rb.linearVelocity = new Vector2(dashDir * dashSpeed, 0f);
+
+            dashTimer -= Time.fixedDeltaTime;
+            isInvincible = true;
+
+            if (dashTimer <= 0f)
+            {
+                dashState = DashState.Cooldown;
+                dashTimer = dashCooldown;
+                isDashing = false; 
+                isInvincible = false;
+                rb.gravityScale = originalGravity;
+            }
+        }
+        else if (dashState == DashState.Cooldown)
+        {
+            dashTimer -= Time.fixedDeltaTime;
+            if (dashTimer <= 0f)
+            {
+                dashState = DashState.Ready;
+            }
+        }
+
     }
 
     // For ground check visualization
@@ -160,6 +212,15 @@ public class PlayerController : MonoBehaviour
     {
         moveSpeed = baseMoveSpeed;
         jumpForce = baseJumpForce;
+    }
+
+    public bool IsDashing()
+    {
+        return isDashing;
+    }
+    public bool IsInvincible()
+    {
+        return isInvincible;
     }
 
 }

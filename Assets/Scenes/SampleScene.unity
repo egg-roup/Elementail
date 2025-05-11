@@ -1169,7 +1169,7 @@ Transform:
   m_GameObject: {fileID: 353473494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.946, y: -0.362, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1284,6 +1284,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  dashSpeed: 20
+  dashDuration: 0.15
+  dashCooldown: 0.3
   rb: {fileID: 0}
   facingRight: 1
 --- !u!114 &353473501
@@ -1331,6 +1334,7 @@ MonoBehaviour:
   downswingPrefab: {fileID: 1389286036643481609, guid: 30c65c0b0e84af94da054b3f264b16d5, type: 3}
   basicHitDamage: 1
   heavyHitDamage: 2
+  swordKnockbackForce: 0
   parryHitboxPrefab: {fileID: 9036466025920297915, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
   hitboxSpawnPoint: {fileID: 593368376}
   playerController: {fileID: 353473500}
