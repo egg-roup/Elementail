@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     private UIManager uiManager;
     private Animator animator; 
     public bool canControl = true;
+    private bool hasShield = false;
+
 
 
     void Start()
@@ -32,6 +34,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        if (hasShield)
+        {
+            Debug.Log("Shield absorbed the damage!");
+            hasShield = false;
+            return;
+        }
+        
         currentHearts -= amount;
         if (currentHearts < 0) currentHearts = 0;
         
@@ -78,5 +87,32 @@ public class PlayerHealth : MonoBehaviour
             uiManager.ShowGameOver();
         }
     }
+    public void GiveShield()
+    {
+        hasShield = true;
+        Debug.Log("One-time shield granted!");
+    }
+    public int GetCurrentHealth() => currentHearts;
+    public int GetMaxHealth() => maxHearts;
+    public void Heal(int amount)
+    {
+        if (currentHearts + amount > maxHearts)
+        {
+            currentHearts = maxHearts;
+            GiveShield();
+            Debug.Log("Health maxed and shield granted!");
+        }
+        else
+        {
+            Debug.Log("Heal not applied — no overflow, no shield.");
+        }
+
+        if (healthBar != null)
+        {
+            healthBar.UpdateHealth(currentHearts);
+        }
+    }
+
+
 
 }

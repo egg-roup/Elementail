@@ -1329,6 +1329,8 @@ MonoBehaviour:
   sideswingPrefab: {fileID: 4935921172437001471, guid: a6aa6184e8a4d2b4c93507c55467b9f5, type: 3}
   upswingPrefab: {fileID: 633331136580552412, guid: 1292404af70aa5d4685a4703537b56ce, type: 3}
   downswingPrefab: {fileID: 1389286036643481609, guid: 30c65c0b0e84af94da054b3f264b16d5, type: 3}
+  basicHitDamage: 1
+  heavyHitDamage: 2
   parryHitboxPrefab: {fileID: 9036466025920297915, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
   hitboxSpawnPoint: {fileID: 593368376}
   playerController: {fileID: 353473500}
@@ -6592,6 +6594,17 @@ Transform:
   - {fileID: 243125458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559393066 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3394363343985853505, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
+  m_PrefabInstance: {fileID: 4033237604480447030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5669a6c9f22a56b4cb841ddfdc7596fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1583068574
 GameObject:
   m_ObjectHideFlags: 0
@@ -8835,6 +8848,7 @@ GameObject:
   - component: {fileID: 1985067251}
   - component: {fileID: 1985067252}
   - component: {fileID: 1985067253}
+  - component: {fileID: 1985067254}
   m_Layer: 5
   m_Name: PawElementUI
   m_TagString: Untagged
@@ -8936,6 +8950,24 @@ MonoBehaviour:
     sprite: {fileID: 0}
     anchoredPosition: {x: 0, y: 0}
     sizeDelta: {x: 80, y: 85}
+--- !u!114 &1985067254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985067249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6299e3bddaf984146b986e838ee0ec56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementRandomizer: {fileID: 1985067252}
+  playerController: {fileID: 353473500}
+  swordAttack: {fileID: 353473503}
+  parryHitbox: {fileID: 1559393066}
+  playerStomp: {fileID: 353473502}
+  playerHealth: {fileID: 353473501}
 --- !u!1 &1995229965
 GameObject:
   m_ObjectHideFlags: 0

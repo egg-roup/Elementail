@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
+    private float baseMoveSpeed;
+    private float baseJumpForce;
+ 
     public float moveSpeed = 5f;
     public float jumpForce = 15f;
     public float coyoteTime = 0.1f; // Time player can jump after leaving ground
@@ -26,7 +29,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         anim = GetComponent<Animator>();
-        
+        baseMoveSpeed = moveSpeed;
+        baseJumpForce = jumpForce;
+
         // This helps prevent the player from getting stuck on edges
         if (GetComponent<CapsuleCollider2D>() != null)
         {
@@ -131,4 +136,17 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void ApplyMovementBuff(float speedMultiplier, float jumpMultiplier)
+    {
+        moveSpeed = baseMoveSpeed * speedMultiplier;
+        jumpForce = baseJumpForce * jumpMultiplier;
+    }
+
+    public void ResetMovementStats()
+    {
+        moveSpeed = baseMoveSpeed;
+        jumpForce = baseJumpForce;
+    }
+
 }

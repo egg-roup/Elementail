@@ -7,6 +7,13 @@ public class SwordAttack : MonoBehaviour
     public GameObject upswingPrefab;
     public GameObject downswingPrefab;
 
+    [Header("Damage Settings")]
+    public float basicHitDamage = 1f;
+    public float heavyHitDamage = 2f;
+
+    private float baseBasicHitDamage;
+    private float baseHeavyHitDamage;
+
     [Header("Parry Prefab")]
     public GameObject parryHitboxPrefab;
 
@@ -25,6 +32,12 @@ public class SwordAttack : MonoBehaviour
     private bool isParryOnCooldown = false;
     private bool parrySuccess = false;
 
+    void Start()
+    {
+        baseBasicHitDamage = basicHitDamage;
+        baseHeavyHitDamage = heavyHitDamage;
+    }
+
     void Update()
     {
         // Left click = sword attack
@@ -40,13 +53,13 @@ public class SwordAttack : MonoBehaviour
             switch (comboIndex)
             {
                 case 0:
-                    StartCoroutine(SpawnHitbox(sideswingPrefab, 1f));
+                    StartCoroutine(SpawnHitbox(sideswingPrefab, basicHitDamage));
                     break;
                 case 1:
-                    StartCoroutine(SpawnHitbox(upswingPrefab, 1f));
+                    StartCoroutine(SpawnHitbox(upswingPrefab, basicHitDamage));
                     break;
                 case 2:
-                    StartCoroutine(SpawnHitbox(downswingPrefab, 2f));
+                    StartCoroutine(SpawnHitbox(downswingPrefab, heavyHitDamage));
                     break;
             }
 
@@ -88,7 +101,7 @@ public class SwordAttack : MonoBehaviour
         {
             hitboxScript.parryUIBar = parryUIBar;
         }
-        
+
         yield return new WaitForSeconds(0.2f);
         Destroy(parry);
         isParrying = false;
@@ -110,4 +123,16 @@ public class SwordAttack : MonoBehaviour
     {
         return isParrying;
     }
+    public void ApplySwordBuff(float basicMultiplier, float heavyMultiplier)
+    {
+        basicHitDamage = baseBasicHitDamage * basicMultiplier;
+        heavyHitDamage = baseHeavyHitDamage * heavyMultiplier;
+    }
+
+    public void ResetSwordDamage()
+    {
+        basicHitDamage = baseBasicHitDamage;
+        heavyHitDamage = baseHeavyHitDamage;
+    }
+
 }

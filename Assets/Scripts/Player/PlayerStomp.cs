@@ -2,35 +2,48 @@ using UnityEngine;
 
 public class PlayerStomp : MonoBehaviour
 {
-    public int stompDamage = 10;
+    public int stompDamage = 1;
     public float jumpForce = 15f;
 
+    private int baseStompDamage;
+    private float baseJumpForce;
     private Rigidbody2D playerRb;
-    private SwordAttack swordAttack; // Reference to SwordAttack component
+    private SwordAttack swordAttack; 
 
     void Start()
     {
         playerRb = GetComponentInParent<Rigidbody2D>();
-        swordAttack = GetComponentInParent<SwordAttack>(); // Get reference to SwordAttack
+        swordAttack = GetComponentInParent<SwordAttack>(); 
+        baseStompDamage = stompDamage;
+        baseJumpForce = jumpForce;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if we're currently parrying - if so, don't activate stomp
         if (swordAttack != null && swordAttack.IsParrying())
             return;
-            
+
         if (other.CompareTag("Enemy"))
         {
-            // Deal damage to the enemy
             EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(stompDamage);
             }
 
-            // Bounce the player upward with full jump force
             playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, jumpForce);
         }
+    }
+    public void SetStompStats(int newDamage, float newJumpForce)
+    {
+        stompDamage = newDamage;
+        jumpForce = newJumpForce;
+    }
+
+    public void ResetStompStats()
+    {
+        stompDamage = baseStompDamage;
+        jumpForce = baseJumpForce;
     }
 }
