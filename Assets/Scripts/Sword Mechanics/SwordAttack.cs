@@ -13,6 +13,7 @@ public class SwordAttack : MonoBehaviour
     [Header("References")]
     public Transform hitboxSpawnPoint;
     public PlayerController playerController;
+    public ParryUIBar parryUIBar; 
 
     private int comboIndex = 0;
     private float lastClickTime = -999f;
@@ -21,6 +22,7 @@ public class SwordAttack : MonoBehaviour
     private bool isAttacking = false;
     private bool isParrying = false;
     private float attackCooldown = 0.3f;
+    private bool isParryOnCooldown = false;
     private bool parrySuccess = false;
 
     void Update()
@@ -44,7 +46,7 @@ public class SwordAttack : MonoBehaviour
                     StartCoroutine(SpawnHitbox(upswingPrefab, 1f));
                     break;
                 case 2:
-                    StartCoroutine(SpawnHitbox(downswingPrefab, 1.25f));
+                    StartCoroutine(SpawnHitbox(downswingPrefab, 2f));
                     break;
             }
 
@@ -52,7 +54,7 @@ public class SwordAttack : MonoBehaviour
         }
 
         // Right click = parry
-        if (Input.GetMouseButtonDown(1) && !isParrying && !isAttacking)
+        if (Input.GetMouseButtonDown(1) && !isParrying && !isAttacking && !isParryOnCooldown)
         {
             StartCoroutine(PerformParry());
         }
@@ -76,29 +78,34 @@ public class SwordAttack : MonoBehaviour
     private System.Collections.IEnumerator PerformParry()
     {
         isParrying = true;
+        isParryOnCooldown = true;
         parrySuccess = false;
 
         Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
-
         GameObject parry = Instantiate(parryHitboxPrefab, hitboxSpawnPoint.position, rotation, transform);
-
-        yield return new WaitForSeconds(0.2f); // Active window
-
-        Destroy(parry);
-
-        if (!parrySuccess)
+        ParryHitbox hitboxScript = parry.GetComponent<ParryHitbox>();
+        if (hitboxScript != null)
         {
-            yield return new WaitForSeconds(0.2f); // Only apply cooldown if failed
+            hitboxScript.parryUIBar = parryUIBar;
         }
-
+        
+        yield return new WaitForSeconds(0.2f);
+        Destroy(parry);
         isParrying = false;
-    }
 
+        float cooldown = parrySuccess ? 0.8f : 1.8f;
+
+   
+
+        yield return new WaitForSeconds(cooldown);
+        isParryOnCooldown = false;
+    }
 
     public void OnSuccessfulParry()
     {
         parrySuccess = true;
     }
+
     public bool IsParrying()
     {
         return isParrying;

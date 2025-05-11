@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SwordHitbox : MonoBehaviour
 {
-    public int baseDamage = 30;
+    public int baseDamage = 1;
     public float duration = 0.2f;
     [HideInInspector] public float damageMultiplier = 1f;
 

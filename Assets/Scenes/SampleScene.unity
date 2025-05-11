@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -121.9, y: 117.2}
+  m_AnchoredPosition: {x: -121.900055, y: 117.19998}
   m_SizeDelta: {x: 0, y: -4.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51452324
@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillImage: {fileID: 2099462290}
-  refillSpeed: 0.5
 --- !u!1 &61951067
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13516404365c3d8418b73de13c7c79c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 4
 --- !u!114 &230149367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,7 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13516404365c3d8418b73de13c7c79c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 4
 --- !u!50 &305334873
 Rigidbody2D:
   serializedVersion: 5
@@ -1313,7 +1312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b8a8b9f553f5419d6331aeb76dd3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stompDamage: 10
+  stompDamage: 1
   jumpForce: 15
 --- !u!114 &353473503
 MonoBehaviour:
@@ -1333,6 +1332,7 @@ MonoBehaviour:
   parryHitboxPrefab: {fileID: 9036466025920297915, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
   hitboxSpawnPoint: {fileID: 593368376}
   playerController: {fileID: 353473500}
+  parryUIBar: {fileID: 51452324}
 --- !u!95 &353473504
 Animator:
   serializedVersion: 7
@@ -2581,7 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13516404365c3d8418b73de13c7c79c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 4
 --- !u!114 &440217361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2834,12 +2834,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2855,7 +2855,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3593,7 +3593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13516404365c3d8418b73de13c7c79c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 4
 --- !u!50 &681350632
 Rigidbody2D:
   serializedVersion: 5
@@ -6362,8 +6362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 12}
+  m_AnchoredPosition: {x: -45.113, y: 0}
+  m_SizeDelta: {x: 316, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421779169
 MonoBehaviour:
@@ -7324,12 +7324,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 32
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -8573,7 +8573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13516404365c3d8418b73de13c7c79c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 4
 --- !u!50 &1973400711
 Rigidbody2D:
   serializedVersion: 5
@@ -9671,8 +9671,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 385, y: 0}
-  m_SizeDelta: {x: 200, y: 12}
+  m_AnchoredPosition: {x: 596.8, y: 0}
+  m_SizeDelta: {x: 316, y: 12}
   m_Pivot: {x: 0.0000000018626451, y: 0.5}
 --- !u!114 &2099462290
 MonoBehaviour:
@@ -9720,6 +9720,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1052230128}
     m_Modifications:
+    - target: {fileID: 123092512395948825, guid: a8b6323d83419584bbfc2e9635209bed, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1175402832750090566, guid: a8b6323d83419584bbfc2e9635209bed, type: 3}
       propertyPath: m_Name
       value: EarthSprite
@@ -9844,6 +9848,10 @@ PrefabInstance:
     - target: {fileID: -7030696141983286840, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: damageAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3933544080587689676, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
+      propertyPath: maxHealth
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 751132640257006551, guid: 25161fabcc8de4c46bd09a1f8b7a9f2c, type: 3}
       propertyPath: m_Name
@@ -10039,6 +10047,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1052230128}
     m_Modifications:
+    - target: {fileID: -5793233724852792383, guid: 3839677096b3a8f49bad93a0aaf1b825, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -5460299489804024429, guid: 3839677096b3a8f49bad93a0aaf1b825, type: 3}
       propertyPath: damageAmount
       value: 1
@@ -10490,6 +10502,10 @@ PrefabInstance:
     - target: {fileID: 3797483791996379295, guid: 49591621bdc4d454aa6853a6633b896b, type: 3}
       propertyPath: damageAmount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552055918909172948, guid: 49591621bdc4d454aa6853a6633b896b, type: 3}
+      propertyPath: maxHealth
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

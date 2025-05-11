@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 5f;
-    public float jumpForce = 12f;
+    public float jumpForce = 15f;
     public float coyoteTime = 0.1f; // Time player can jump after leaving ground
     
     [Header("Ground Check")]
