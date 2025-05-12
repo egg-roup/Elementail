@@ -32,8 +32,8 @@ public class ElementBuffApplier : MonoBehaviour
         switch (element)
         {
             case ElementType.Air:
-                playerController?.ApplyMovementBuff(1.2f, 1.2f); // +speed, +jump
-                parryHitbox?.ApplyParryBuff(parryHitbox.parryDamage, parryHitbox.parryKnockbackForce * 1.5f); // +knockback
+                playerController?.ApplyMovementBuff(1.35f, 1.35f); // +speed, +jump
+                parryHitbox?.ApplyParryBuff(parryHitbox.parryDamage, parryHitbox.parryKnockbackForce * 1.75f); // +knockback
                 break;
 
             case ElementType.Earth:
@@ -51,9 +51,9 @@ public class ElementBuffApplier : MonoBehaviour
                 break;
 
             case ElementType.All:
-                playerController?.ApplyMovementBuff(1.2f, 1.2f);
+                playerController?.ApplyMovementBuff(1.35f, 1.35f);
                 swordAttack?.ApplySwordBuff(2f, 2f);
-                parryHitbox?.ApplyParryBuff(parryHitbox.parryDamage + 1, parryHitbox.parryKnockbackForce * 1.5f);
+                parryHitbox?.ApplyParryBuff(parryHitbox.parryDamage + 1, parryHitbox.parryKnockbackForce * 1.75f);
                 playerStomp?.SetStompStats(4, playerStomp.jumpForce);
                 playerHealth.Heal(2); 
                 break;

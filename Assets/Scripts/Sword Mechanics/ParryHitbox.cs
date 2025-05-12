@@ -77,12 +77,14 @@ public class ParryHitbox : MonoBehaviour
     {
         parryDamage = newDamage;
         parryKnockbackForce = newKnockback;
+        swordAttack?.ApplySwordKnockback();
     }
 
     public void ResetParryStats()
     {
         parryDamage = baseParryDamage;
         parryKnockbackForce = baseParryKnockbackForce;
+        swordAttack?.ApplySwordKnockback();
     }
 
 }

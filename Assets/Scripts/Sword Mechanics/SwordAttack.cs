@@ -38,18 +38,7 @@ public class SwordAttack : MonoBehaviour
     {
         baseBasicHitDamage = basicHitDamage;
         baseHeavyHitDamage = heavyHitDamage;
-        if (parryHitboxPrefab != null)
-        {
-            ParryHitbox parryScript = parryHitboxPrefab.GetComponent<ParryHitbox>();
-            if (parryScript != null)
-            {
-                swordKnockbackForce = parryScript.parryKnockbackForce * 0.25f;
-            }
-            else
-            {
-                Debug.LogWarning("ParryHitbox component not found on parryHitboxPrefab.");
-            }
-        }
+        ApplySwordKnockback();
     }
 
     void Update()
@@ -150,4 +139,19 @@ public class SwordAttack : MonoBehaviour
         heavyHitDamage = baseHeavyHitDamage;
     }
 
+    public void ApplySwordKnockback()
+    {
+        if (parryHitboxPrefab != null)
+        {
+            ParryHitbox parryScript = parryHitboxPrefab.GetComponent<ParryHitbox>();
+            if (parryScript != null)
+            {
+                swordKnockbackForce = parryScript.parryKnockbackForce * 0.5f;
+            }
+            else
+            {
+                Debug.LogWarning("ParryHitbox component not found on parryHitboxPrefab.");
+            }
+        }
+    }
 }
