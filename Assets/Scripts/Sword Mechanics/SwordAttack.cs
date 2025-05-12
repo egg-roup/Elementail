@@ -55,7 +55,7 @@ public class SwordAttack : MonoBehaviour
     void Update()
     {
         // Left click = sword attack
-        if (Input.GetMouseButtonDown(0) && !isAttacking && !isParrying && !playerController.IsDashing())
+        if (Input.GetButtonDown("SwordAttack") && !isAttacking && !isParrying && !playerController.IsDashing())
         {
             float timeSinceLastClick = Time.time - lastClickTime;
 
@@ -81,7 +81,7 @@ public class SwordAttack : MonoBehaviour
         }
 
         // Right click = parry
-        if (Input.GetMouseButtonDown(1) && !isParrying && !isAttacking && !isParryOnCooldown)
+        if (Input.GetButtonDown("Parry") && !isParrying && !isAttacking && !isParryOnCooldown)
         {
             StartCoroutine(PerformParry());
         }

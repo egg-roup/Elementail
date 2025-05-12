@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(moveInput));
         anim.SetBool("IsGrounded", isGrounded);
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashState == DashState.Ready)
+        if (Input.GetButtonDown("Dash") && dashState == DashState.Ready)
         {
             dashState = DashState.Dashing;
             dashTimer = dashDuration;
