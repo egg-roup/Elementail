@@ -24683,7 +24683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033081671}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: QuitToMainMenu
         m_Mode: 1
@@ -24816,7 +24816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033081671}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: CloseConfirmQuitPanel
         m_Mode: 1
@@ -25357,7 +25357,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033081671}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OpenOptionsMenu
         m_Mode: 1
@@ -26445,7 +26445,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033081671}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -27170,7 +27170,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033081671}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OpenConfirmQuitPanel
         m_Mode: 1
@@ -27412,7 +27412,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033081671}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -37978,11 +37978,11 @@ PrefabInstance:
     - target: {fileID: 3398347367268173610, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2033081671}
     - target: {fileID: 3398347367268173610, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2033081671}
     - target: {fileID: 3398347367268173610, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseOptionsMenu
@@ -38003,6 +38003,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 37b813e11a2e28845bf802663c53d251, type: 3}
+    - target: {fileID: 5342901953475000039, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
+      propertyPath: m_MinValue
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 5342901953475000039, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -38042,6 +38046,10 @@ PrefabInstance:
     - target: {fileID: 7987244557052579623, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -130
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321548021445120832, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
+      propertyPath: m_MinValue
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 8321548021445120832, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -38121,6 +38129,33 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2212773048566935043, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
   m_PrefabInstance: {fileID: 1443123889}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1443123891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7530204304641973969, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
+  m_PrefabInstance: {fileID: 1443123889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1443123892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5342901953475000039, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
+  m_PrefabInstance: {fileID: 1443123889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1443123893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8321548021445120832, guid: 838adee70cc08f84eb8f89bc3e789259, type: 3}
+  m_PrefabInstance: {fileID: 1443123889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1466265665
 GameObject:
   m_ObjectHideFlags: 0
@@ -40545,9 +40580,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033081671}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OpenConfirmQuitPanel
+        m_MethodName: QuitToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -40700,13 +40735,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: b1d700171e5e2ed4a94aa3163a5e063f, type: 2}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  optionsMenu: {fileID: 0}
-  gameOverScreen: {fileID: 0}
-  confirmQuitPanel: {fileID: 0}
-  pauseButton: {fileID: 0}
+  musicSlider: {fileID: 1443123893}
+  sfxSlider: {fileID: 1443123892}
+  pauseMenu: {fileID: 414629791}
+  optionsMenu: {fileID: 1443123891}
+  gameOverScreen: {fileID: 41464768}
+  confirmQuitPanel: {fileID: 142802584}
+  pauseButton: {fileID: 408969734}
 --- !u!4 &2033081672
 Transform:
   m_ObjectHideFlags: 0
