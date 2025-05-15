@@ -1674,6 +1674,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166373228}
   m_CullTransparentMesh: 1
+--- !u!1 &1480558398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 663330634127291172, guid: 38f948590e26cba40ac8874434aee33b, type: 3}
+  m_PrefabInstance: {fileID: 2262224149331180881}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1480558404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480558398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76273f62e836e844188b15131dad71d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneMusicList:
+  - sceneName: lvl1
+    trackName: Tutorial
+  - sceneName: Lvl2
+    trackName: Level1
+  - sceneName: Lvl3
+    trackName: Boss
 --- !u!1 &1735980559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,7 +2659,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 663330634127291172, guid: 38f948590e26cba40ac8874434aee33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1480558404}
   m_SourcePrefab: {fileID: 100100000, guid: 38f948590e26cba40ac8874434aee33b, type: 3}
 --- !u!1 &2276159942882329506 stripped
 GameObject:
