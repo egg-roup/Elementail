@@ -28,7 +28,7 @@ public class MainMenuController : MonoBehaviour
     // }
 
     public void StartGame() {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("lvl1");
     }
 
     public void OpenOptions() {
