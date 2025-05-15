@@ -37161,11 +37161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementRandomizer: {fileID: 1652399894}
-  playerController: {fileID: 0}
-  swordAttack: {fileID: 0}
-  parryHitbox: {fileID: 0}
-  playerStomp: {fileID: 0}
-  playerHealth: {fileID: 0}
+  playerController: {fileID: 353473500}
+  swordAttack: {fileID: 353473503}
+  parryHitbox: {fileID: 4033237604480447031}
+  playerStomp: {fileID: 353473502}
+  playerHealth: {fileID: 353473501}
 --- !u!114 &1652399893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39755,6 +39755,17 @@ PrefabInstance:
       addedObject: {fileID: 144806110}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
+--- !u!114 &4033237604480447031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3394363343985853505, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
+  m_PrefabInstance: {fileID: 4033237604480447030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5669a6c9f22a56b4cb841ddfdc7596fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4781346019067515378
 PrefabInstance:
   m_ObjectHideFlags: 0
