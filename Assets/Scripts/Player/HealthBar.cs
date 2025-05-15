@@ -9,6 +9,9 @@ public class HealthBar : MonoBehaviour
     public Transform topRow;
     public Transform bottomRow;
 
+    public Sprite fullHeartSprite;
+    public Sprite emptyHeartSprite;
+
     private List<GameObject> icons = new List<GameObject>();
     private int maxHearts = 9;
     private int currentHealth = 9;
@@ -38,14 +41,12 @@ public class HealthBar : MonoBehaviour
             icons.Add(icon);
         }
         
-        // Update health display after icons are created
         UpdateHealth(currentHealth);
     }
 
     public void UpdateHealth(int currentHealth) {
         this.currentHealth = currentHealth;
         
-        // If icons aren't built yet, just save the health value and return
         if (icons.Count == 0) {
             return;
         }
@@ -54,13 +55,14 @@ public class HealthBar : MonoBehaviour
         bottomRowLayout.enabled = false;
 
         for (int i = 0; i < icons.Count; i++) {
-            if (i < currentHealth)
-            {
-                icons[i].SetActive(true);  // Heart is visible
-            }
-            else
-            {
-                icons[i].SetActive(false); // Heart is hidden (not removed, just invisible)
+            Image iconImage = icons[i].GetComponent<Image>();
+
+            if (i < currentHealth) {
+                iconImage.sprite = fullHeartSprite;
+                icons[i].SetActive(true);
+            } else {
+                iconImage.sprite = emptyHeartSprite;
+                icons[i].SetActive(true); 
             }
         }
 
