@@ -2537,6 +2537,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4094151649258064079, guid: 38f948590e26cba40ac8874434aee33b, type: 3}
+      propertyPath: tracks.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f76157f3d4e7cbe498ae825df9081024, type: 3}
+    - target: {fileID: 4094151649258064079, guid: 38f948590e26cba40ac8874434aee33b, type: 3}
       propertyPath: tracks.Array.data[0].trackName
       value: MainMenu
       objectReference: {fileID: 0}
