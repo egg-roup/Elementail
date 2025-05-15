@@ -45,6 +45,12 @@ public class ParryHitbox : MonoBehaviour
 
         if (other.CompareTag("Enemy"))
         {
+            BossHealth bossHealth = other.GetComponent<BossHealth>();
+            if (bossHealth != null)
+            {
+                bossHealth.TakeDamage(parryDamage);
+            }
+            
             EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
             KnockbackController knockback = other.GetComponent<KnockbackController>() ?? other.gameObject.AddComponent<KnockbackController>();
 

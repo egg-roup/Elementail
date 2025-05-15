@@ -2096,7 +2096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 25}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939095527
@@ -2124,8 +2124,8 @@ MonoBehaviour:
     toe glows with elemental energy, you'll journey through magical realms, solve
     puzzles, and discover secrets hidden in light and shadow."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 48c4e3eedc344c3408b1e6696ed8139a, type: 2}
-  m_sharedMaterial: {fileID: -2994885488455161868, guid: 48c4e3eedc344c3408b1e6696ed8139a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 362e548e1d23e2847987aba451330ef7, type: 2}
+  m_sharedMaterial: {fileID: -8982694038751741382, guid: 362e548e1d23e2847987aba451330ef7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2149,19 +2149,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

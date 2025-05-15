@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject confirmQuitPanel; 
     public GameObject pauseButton;
+    public GameObject endPanel;
 
     private bool isPaused = false;
 
@@ -43,6 +44,7 @@ public class UIManager : MonoBehaviour
         optionsMenu.SetActive(false);
         gameOverScreen.SetActive(false);
         confirmQuitPanel.SetActive(false);
+        endPanel.SetActive(false);
         pauseButton.SetActive(true);
     }
 
@@ -54,6 +56,11 @@ public class UIManager : MonoBehaviour
         }
         if (optionsMenu.activeSelf)
         {
+            return;
+        }
+        if (endPanel.activeSelf)
+        {
+            pauseButton.SetActive(false);
             return;
         }
         else if (confirmQuitPanel.activeSelf) {

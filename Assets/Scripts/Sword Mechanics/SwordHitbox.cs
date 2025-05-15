@@ -22,6 +22,12 @@ public class SwordHitbox : MonoBehaviour
                 int totalDamage = Mathf.RoundToInt(baseDamage * damageMultiplier);
                 health.TakeDamage(totalDamage);
             }
+            BossHealth bossHealth = other.GetComponent<BossHealth>();
+            if (bossHealth != null)
+            {
+                int totalDamage = Mathf.RoundToInt(baseDamage * damageMultiplier);
+                bossHealth.TakeDamage(totalDamage);
+            }
             KnockbackController knockback = other.GetComponent<KnockbackController>() ?? other.gameObject.AddComponent<KnockbackController>();
             Vector2 direction = (other.transform.position - transform.position).normalized;
             knockback.ApplyKnockback(direction * knockbackForce, 0.3f);
