@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 57ef4bc5e085821408e749ef7c2b76c6
+guid: bf28b85772e5c084c813a3c96981c938
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 930271502624132100
-    second: sprout-fics-reblogs_0
+      213: 8526836225040930613
+    second: Sesame_Attack1_0
+  - first:
+      213: 4035650039998742153
+    second: Sesame_Attack1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprout-fics-reblogs_0
+      name: Sesame_Attack1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 450
-        height: 300
+        width: 984
+        height: 576
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40c849ab00df8ec00800000000000000
-      internalID: 930271502624132100
+      spriteID: 5375f7b9e58655670800000000000000
+      internalID: 8526836225040930613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sesame_Attack1_1
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 257
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e7aef5452810830800000000000000
+      internalID: 4035650039998742153
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ac3894ea0aacaf542b5aa6e4a9afa295
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprout-fics-reblogs_0: 930271502624132100
+      Sesame_Attack1_0: 8526836225040930613
+      Sesame_Attack1_1: 4035650039998742153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

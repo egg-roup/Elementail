@@ -33,12 +33,14 @@ public class SwordAttack : MonoBehaviour
     private float attackCooldown = 0.3f;
     private bool isParryOnCooldown = false;
     private bool parrySuccess = false;
+    private Animator animator;
 
     void Start()
     {
         baseBasicHitDamage = basicHitDamage;
         baseHeavyHitDamage = heavyHitDamage;
         ApplySwordKnockback();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -79,6 +81,7 @@ public class SwordAttack : MonoBehaviour
     private System.Collections.IEnumerator SpawnHitbox(GameObject prefab, float damageMultiplier)
     {
         isAttacking = true;
+        animator.SetTrigger("Attack");
 
         Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
 

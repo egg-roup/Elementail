@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 57ef4bc5e085821408e749ef7c2b76c6
+guid: 967ec42655a63fb4e8412a1e4aaf7842
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 930271502624132100
-    second: sprout-fics-reblogs_0
+      213: -2771288417953385283
+    second: Sesame_Attack4_0
+  - first:
+      213: 2004381304344527528
+    second: Sesame_Attack4_1
+  - first:
+      213: 4422106957142350056
+    second: Sesame_Attack4_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprout-fics-reblogs_0
+      name: Sesame_Attack4_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 450
-        height: 300
+        width: 984
+        height: 576
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40c849ab00df8ec00800000000000000
-      internalID: 930271502624132100
+      spriteID: db4fbb5edd76a89d0800000000000000
+      internalID: -2771288417953385283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sesame_Attack4_1
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 335
+        width: 80
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2c3e73d2ef0db10800000000000000
+      internalID: 2004381304344527528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sesame_Attack4_2
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 239
+        width: 98
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8d04329da7e5d30800000000000000
+      internalID: 4422106957142350056
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 915c3da7fea325f4da6666a56fb3280d
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sprout-fics-reblogs_0: 930271502624132100
+      Sesame_Attack4_0: -2771288417953385283
+      Sesame_Attack4_1: 2004381304344527528
+      Sesame_Attack4_2: 4422106957142350056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
