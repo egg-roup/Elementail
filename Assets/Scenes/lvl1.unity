@@ -47592,10 +47592,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 593368376}
     m_Modifications:
-    - target: {fileID: 250137966594754640, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3394363343985853505, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
       propertyPath: parryUIBar
       value: 

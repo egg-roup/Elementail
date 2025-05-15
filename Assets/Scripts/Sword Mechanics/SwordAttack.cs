@@ -83,7 +83,7 @@ public class SwordAttack : MonoBehaviour
         isAttacking = true;
         animator.SetBool("isAttacking", true);
         animator.SetTrigger("Attack");
-        yield return new WaitForSeconds(0.1f);
+
         Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
 
         GameObject hitbox = Instantiate(prefab, hitboxSpawnPoint.position, rotation);
