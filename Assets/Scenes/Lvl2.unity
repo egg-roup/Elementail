@@ -1330,8 +1330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sideswingPrefab: {fileID: 4935921172437001471, guid: a6aa6184e8a4d2b4c93507c55467b9f5, type: 3}
-  upswingPrefab: {fileID: 633331136580552412, guid: 1292404af70aa5d4685a4703537b56ce, type: 3}
-  downswingPrefab: {fileID: 1389286036643481609, guid: 30c65c0b0e84af94da054b3f264b16d5, type: 3}
+  upswingPrefab: {fileID: 4935921172437001471, guid: a6aa6184e8a4d2b4c93507c55467b9f5, type: 3}
+  downswingPrefab: {fileID: 4935921172437001471, guid: a6aa6184e8a4d2b4c93507c55467b9f5, type: 3}
   basicHitDamage: 1
   heavyHitDamage: 2
   swordKnockbackForce: 0
