@@ -81,6 +81,7 @@ public class SwordAttack : MonoBehaviour
     private System.Collections.IEnumerator SpawnHitbox(GameObject prefab, float damageMultiplier)
     {
         isAttacking = true;
+        animator.SetBool("isAttacking", true);
         animator.SetTrigger("Attack");
 
         Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
