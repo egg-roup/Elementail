@@ -1417,8 +1417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sideswingPrefab: {fileID: 4935921172437001471, guid: a6aa6184e8a4d2b4c93507c55467b9f5, type: 3}
-  upswingPrefab: {fileID: 633331136580552412, guid: 1292404af70aa5d4685a4703537b56ce, type: 3}
-  downswingPrefab: {fileID: 1389286036643481609, guid: 30c65c0b0e84af94da054b3f264b16d5, type: 3}
+  upswingPrefab: {fileID: 4935921172437001471, guid: a6aa6184e8a4d2b4c93507c55467b9f5, type: 3}
+  downswingPrefab: {fileID: 4935921172437001471, guid: a6aa6184e8a4d2b4c93507c55467b9f5, type: 3}
   basicHitDamage: 1
   heavyHitDamage: 2
   swordKnockbackForce: 0
@@ -46663,6 +46663,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a2de40aebf2ab14a875ee505ffc0a19, type: 3}
+--- !u!1 &2426561808399492467 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7528571611755137329, guid: 6a2de40aebf2ab14a875ee505ffc0a19, type: 3}
+  m_PrefabInstance: {fileID: 2426561808399492466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3079293647461185655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46972,7 +46977,7 @@ PrefabInstance:
     - target: {fileID: 3394363343985853505, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
       propertyPath: successVFXPrefab
       value: 
-      objectReference: {fileID: 7528571611755137329, guid: 6a2de40aebf2ab14a875ee505ffc0a19, type: 3}
+      objectReference: {fileID: 2426561808399492467}
     - target: {fileID: 6580937542018935501, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -47030,7 +47035,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7991896044857849783, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6580937542018935501, guid: 4a049e43a4b66d84091faa9c9fc5244b, type: 3}
       insertIndex: -1

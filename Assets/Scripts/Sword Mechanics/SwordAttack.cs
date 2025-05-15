@@ -82,16 +82,19 @@ public class SwordAttack : MonoBehaviour
     {
         isAttacking = true;
         animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(0.1f); 
 
         Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
 
         GameObject hitbox = Instantiate(prefab, hitboxSpawnPoint.position, rotation);
+        hitbox.transform.localScale = new Vector3(6.5f, 1.5f, .5f); 
 
         SwordHitbox hitboxScript = hitbox.GetComponent<SwordHitbox>();
-        if (hitboxScript != null)
+        if (hitboxScript != null) 
+        {
             hitboxScript.damageMultiplier = damageMultiplier;
             hitboxScript.knockbackForce = swordKnockbackForce;
-
+        }
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
     }
