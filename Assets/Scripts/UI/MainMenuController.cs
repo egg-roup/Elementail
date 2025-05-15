@@ -19,7 +19,7 @@ public class MainMenuController : MonoBehaviour
     {
         LoadVolume();
         ShowMainPanel();
-        // MusicManager.Instance.PlayMusic("MainMenu");
+        MusicManager.Instance.PlayMusic("MainMenu");
     }
 
     // public void Play() 
