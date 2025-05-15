@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ParryHitbox : MonoBehaviour
 {
-    public GameObject successVFXPrefab;
+    // GameObject successVFXPrefab;
     public float knockbackDuration = 0.5f;
     public ParryUIBar parryUIBar;
 
@@ -62,8 +62,8 @@ public class ParryHitbox : MonoBehaviour
             }
         }
 
-            if (successVFXPrefab != null)
-                Instantiate(successVFXPrefab, transform.position, Quaternion.identity);
+            // if (successVFXPrefab != null)
+            //     Instantiate(successVFXPrefab, transform.position, Quaternion.identity);
 
             animator?.SetTrigger("Parry");
             swordAttack?.OnSuccessfulParry();
