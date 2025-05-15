@@ -86,6 +86,7 @@ public class SwordAttack : MonoBehaviour
         Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
 
         GameObject hitbox = Instantiate(prefab, hitboxSpawnPoint.position, rotation);
+        hitbox.transform.localScale = new Vector3(6.5f, 1.5f, .5f); 
 
         SwordHitbox hitboxScript = hitbox.GetComponent<SwordHitbox>();
         if (hitboxScript != null)
@@ -103,6 +104,7 @@ public class SwordAttack : MonoBehaviour
 
         Quaternion rotation = playerController.facingRight ? Quaternion.identity : Quaternion.Euler(0f, 180f, 0f);
         GameObject parry = Instantiate(parryHitboxPrefab, hitboxSpawnPoint.position, rotation, transform);
+        parry.transform.localScale = parryHitboxPrefab.transform.localScale; 
         ParryHitbox hitboxScript = parry.GetComponent<ParryHitbox>();
         if (hitboxScript != null)
         {
