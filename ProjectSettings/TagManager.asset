@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - StompZone
   - EnemyProjectile
+  - Wall
   layers:
   - Default
   - TransparentFX

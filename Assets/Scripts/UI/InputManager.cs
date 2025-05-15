@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        mainMenu = FindObjectOfType<MainMenuController>();
+        mainMenu = Object.FindFirstObjectByType<MainMenuController>();
     }
 
     private void Update()
